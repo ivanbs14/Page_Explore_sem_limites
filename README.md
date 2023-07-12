@@ -17,7 +17,7 @@ Layout UI/UX RocketSeat.
 
 <p align="center">
 Você pode visualizar e interagir com a pagina do projeto através 
-<a href="https://ivanbs14.github.io/Land_page_BlogGatos/">Click aqui </a>
+<a href="https://ivanbs14.github.io/Page_Explore_sem_limites/">Click aqui </a>
 </p>
 
 <p align="center">
