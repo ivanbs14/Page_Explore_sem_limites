@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --fontFam-text-One: 'Mulish', sans-serif;
+
+    --fontsz-text-Title: 5.8rem;
+    --fontsz-text-SubTitle: 3.2rem;
+    --fontsz-text-SubTitleTw: 2.0rem;
+    --fontsz-text-TitleOn: 1.6rem;
+    
+    --color-bg-One: #FFFFFF;
+    --color-bg-Two: linear-gradient(134deg, #343193 0%, #302C63 100%);
+    --color-text-Title: #B52184;
+    --color-text-SubTitle: #312D64;
+}
+
+body{
+    font-family: var(--fontFam-text-One);
+    background-color: var(--color-bg-One);
+
+    color: var(--color-text-SubTitle);
+    font-size: var(--fontsz-text-TitleOn);
+    font-weight: 600;
+
+    display: grid;
+    grid-template-rows: 83.5rem auto 61.2rem 8rem;
+    grid-template-areas: 
+    "header"
+    "menu"
+    "dvform"
+    "footer";
+}
+
+.o-header{
+    grid-area: header;
+    width: 100%;
+    display: flex;
+    padding: 0 3rem 10.0rem 3rem;
+    justify-content: space-between;
+}
+
+.dvHeader{
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 21.0rem 0 0 7rem;
+}
+
+.dvHeader button{
+    width: 6.5rem;
+    height: 11rem;
+    border: none;
+    background-color: var(--color-bg-One);
+    margin-top: 15rem;
+
+    cursor: pointer;
+}
+
+.dvHeader h1{
+    color: var(--color-text-Title);
+    font-size: var(--fontsz-text-Title);
+    font-weight: 900;
+}
+
+.astro{
+    order: 2;
+}
+
+.o-header span{
+    font-size: var(--fontsz-text-SubTitle);
+}
+
+.mainTes{
+    grid-area: menu;
+    background: var(--color-bg-Two);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6.5rem 11rem;
+}
+
+.card{
+    width: 36.5rem;
+    height: 45rem;
+
+    background-color: var(--color-bg-One);
+    border-radius: 2.5rem;
+    padding: 3.2rem;
+}
+
+.card img{
+    margin-bottom: 4rem;
+}
+
+.card h3{
+    color: var(--color-text-Title);
+    font-size: var(--fontsz-text-SubTitle);
+    font-weight: 900;
+    margin-bottom: 2.4rem;
+}
+
+.card p{
+    font-size: var(--fontsz-text-TitleOn);
+}
+
+.dvform{
+    grid-area: dvform;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+form{
+    padding: 10rem 0 0 10.1rem;
+}
+
+form h2{
+    font-size: 4.2rem;
+    font-weight: 900;
+    color: var(--color-text-Title);
+}
+
+.label{
+    width: 59rem;
+    height: 5rem;
+    margin-top: 3rem;
+    display: flex;
+}
+
+.label input{
+    width: 59rem;
+    height: 5rem;
+    padding: 1.6rem 1.6rem 1.6rem 5rem;
+    border: 0.2rem solid var(--color-text-SubTitle);
+    border-radius: 1.6rem;
+
+    font-family: var(--fontFam-text-One);
+    font-size: 2rem;
+    color: var(--color-text-SubTitle);
+    font-weight: 600;
+    
+    position: absolute;
+}
+
+.label input::placeholder, textarea::placeholder{
+    opacity: 0.70;
+    color: var(--color-text-SubTitle);
+}
+
+.label img{
+    position: relative;
+    width: 2.4rem;
+    left: 1.5rem;
+    top: .3rem;
+    z-index: 1;
+}
+
+.label:nth-child(3){
+    margin-top: 2.4rem;
+}
+
+textarea{
+    width: 59rem;
+    height: 12.5rem;
+    margin-top: 2.4rem;
+    padding: 1.6rem 1.6rem 1.6rem 1.6rem;
+    border: 0.2rem solid var(--color-text-SubTitle);
+    border-radius: 1.6rem;
+
+    font-family: var(--fontFam-text-One);
+    font-size: 2rem;
+    color: var(--color-text-SubTitle);
+    font-weight: 600;
+}
+
+form button{
+    width: 15rem;
+    height: 4.5rem;
+    border-radius: 1.6rem;
+    margin-top: 2.4rem;
+    border: none;
+    background: var(--color-bg-Two);
+
+    font-size: 1.4rem;
+    color: var(--color-bg-One);
+    font-weight: 700;
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-bg-One);
+    font-size: var(--fontsz-text-SubTitleTw);
+
+    background: var(--color-bg-Two);
+}
+
+@media (max-width: 425px) {
+
+    .o-header, .mainTes, form, footer{
+        width: 43rem;
+    }
+    
+    .o-header{
+        grid-area: header;
+        height: 60rem;
+        flex-direction: column;
+        padding: 0 3.2rem;
+    }
+    
+        .o-header span{
+            font-size: 2rem;
+        }
+
+    .dvHeader{
+        order: 2;
+        margin: 0;
+        align-items: center;
+    }
+    
+    .dvHeader h1{
+        font-size: 3.2rem;
+    }
+
+    .dvHeader button{
+        margin-top: 3.5rem;
+    }
+
+    .astro{
+        order: 1;
+    }
+
+    .mainTes{
+        flex-wrap: wrap;
+        padding: 3.3rem 4rem;
+        gap: 5rem;
+    }
+
+    form{
+        padding: 8rem 4rem 0 4rem;
+    }
+
+    .label, .label input, textarea{
+        width: 35rem;
+    }
+    
+    .dvform img:nth-child(2){
+        display: none;
+    }
+
+    form h2{
+        font-size: 3rem;
+    }
+
+    footer{
+
+    }
+}
